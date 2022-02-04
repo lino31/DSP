@@ -17,6 +17,10 @@ almere_data = pd.read_csv('Bridge_data.csv', encoding= 'unicode_escape')
 st.text("Below is a complete list of bridges in Almere")
 st.write(almere_data)
 
+dataset_name = st.sidebar.selectbox("Select Bridge Condition", ("Good", "Reasonable", "Moderate", "Perfect", "Poor"))
+
+classifer_name = st.sidebar.selectbox("Select Bridge Prioritization Category", ("KNN", "SVM", "Random Forest"))
+
 
 st.subheader("Construction Material Type with in the dataset")
 st.write("Knowing the type of construction material used in the bridge is important for referbishment, from the data below we can see that concrete is the most abundant material to recycle bridge parts from, while Composet is the least.")
