@@ -69,6 +69,7 @@ import streamlit.components.v1 as components
 st.header("New bridge data input")
 st.markdown('Below you will find a system designed to add new bridge data to the database')
 
+st.file_uploader("Upload an image of the bridge")
 st.number_input("Asset number:")
 st.text_input("Asset type:")
 st.radio("Asset type:", ["Fiets-Voetbrug", "Verkeersbrug", "Duikerbrug"])
